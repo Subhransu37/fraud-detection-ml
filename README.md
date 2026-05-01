@@ -80,7 +80,7 @@ Due to GitHub file size limits, the dataset is not included in this repository.
 👉 Add your dataset here:
 
 ```
-/data/AIML Dataset.csv
+https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset
 ```
 
 Or use your own dataset with the same structure.
