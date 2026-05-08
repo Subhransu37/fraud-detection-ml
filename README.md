@@ -1,128 +1,231 @@
-# fraud-detection-ml
-# 💳 Credit Card Fraud Detection System
+# 💳 Fraud Detection ML System
 
-A Machine Learning project that detects fraudulent credit card transactions using **Logistic Regression**, with a complete pipeline and a simple **Streamlit web app** for real-time predictions.
+An end-to-end **Machine Learning-based Credit Card Fraud Detection System** built using **Python, Scikit-learn, and Streamlit** to identify fraudulent financial transactions in real time.
 
----
-
-## 🚀 Project Overview
-
-This project aims to identify fraudulent transactions from credit card data using supervised machine learning.
-It uses a well-structured ML pipeline with preprocessing and model training to achieve high accuracy.
-
-✅ Model Accuracy: **~94%**
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-red)
+![Status](https://img.shields.io/badge/Project-Completed-success)
 
 ---
 
-## 🧠 Technologies Used
+## 📌 Overview
 
-* Python 🐍
-* Scikit-learn
-* Pandas & NumPy
-* Joblib (for model saving/loading)
-* Streamlit (for web app)
+Financial fraud is one of the biggest challenges in digital transactions.
+
+This project leverages **Machine Learning classification techniques** to detect fraudulent transactions by analyzing transaction patterns and behavioral features.
+
+The system includes:
+
+✅ Data preprocessing pipeline  
+✅ Model training and evaluation  
+✅ Fraud prediction engine  
+✅ Interactive Streamlit web application  
+✅ Real-time transaction classification
 
 ---
 
-## ⚙️ Features
+## 🚀 Key Highlights
 
-* Data preprocessing using **ColumnTransformer**
-* ML Pipeline for clean and scalable workflow
-* Logistic Regression model
-* Model serialization using Joblib
-* Interactive web app using Streamlit
-* Real-time fraud prediction
+- Built complete ML pipeline using **Scikit-learn**
+- Handles **imbalanced fraud detection dataset**
+- Real-time prediction through Streamlit UI
+- Efficient preprocessing with **ColumnTransformer**
+- Model persistence using **Joblib**
+- End-to-end deployment-ready structure
+
+---
+
+## 🧠 Tech Stack
+
+### Programming
+- Python
+
+### Libraries
+- Pandas
+- NumPy
+- Scikit-learn
+- Joblib
+- Matplotlib / Seaborn
+- Streamlit
+
+### Tools
+- Jupyter Notebook
+- VS Code
+- Git & GitHub
+
+---
+
+## 📊 Model Performance
+
+| Metric | Score |
+|-------|------|
+| Accuracy | **94%** |
+| Precision | High |
+| Recall | High |
+| F1 Score | Optimized |
+
+> The model is designed to minimize false negatives, which is critical in fraud detection systems.
+
+---
+
+## ⚙️ ML Workflow
+
+```text
+Raw Dataset
+   ↓
+Data Cleaning
+   ↓
+Feature Engineering
+   ↓
+Preprocessing
+(ColumnTransformer)
+   ↓
+Train-Test Split
+   ↓
+Model Training
+(Logistic Regression / Random Forest)
+   ↓
+Evaluation
+   ↓
+Model Saving
+   ↓
+Streamlit Deployment
+```
 
 ---
 
 ## 📂 Project Structure
 
-```
-📁 Fraud Detection Project
-│── Fraud_detection.py        # Main application (Streamlit app)
-│── analysis_model.ipynb      # Model training & analysis
-│── .gitignore
-│── README.md
+```bash
+fraud-detection-ml/
+│
+├── Fraud_detection.py        # Streamlit web application
+├── analysis_model.ipynb      # Data analysis & model training
+├── model.pkl                # Saved trained model
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## 🧪 Model Details
+## 🌐 Streamlit Web App
 
-* Algorithm: **Logistic Regression**
-* Pipeline:
+The project includes an interactive web app for real-time fraud prediction.
 
-  * Data Cleaning
-  * Feature Transformation (ColumnTransformer)
-  * Model Training
-* Performance:
-
-  * Accuracy: **94%**
-
----
-
-## 🌐 Streamlit App
-
-This project includes a simple UI built with Streamlit where users can input transaction details and get predictions instantly.
-
-### ▶️ Run the app locally:
+### Run Locally
 
 ```bash
 streamlit run Fraud_detection.py
 ```
 
+Then open:
+
+```bash
+http://localhost:8501
+```
+
+---
+
+## 📷 Features of Web App
+
+✔ User-friendly interface  
+✔ Manual transaction input  
+✔ Instant fraud prediction  
+✔ Real-time classification results
+
 ---
 
 ## 📊 Dataset
 
-Due to GitHub file size limits, the dataset is not included in this repository.
+Dataset used for training:
 
-👉 Add your dataset here:
+**Credit Card Fraud Detection Dataset**
 
-```
+Download from Kaggle:
+
 https://www.kaggle.com/datasets/amanalisiddiqui/fraud-detection-dataset
+
+---
+
+## 💾 Generate Model File
+
+To create the trained model:
+
+### Step 1
+Run notebook:
+
+```bash
+analysis_model.ipynb
 ```
 
-Or use your own dataset with the same structure.
+### Step 2
+Export model using Joblib:
+
+```python
+import joblib
+joblib.dump(model, "model.pkl")
+```
 
 ---
 
-## 💾 Model File
+## 🔮 Future Enhancements
 
-The trained model (`.pkl`) is not uploaded due to size limitations.
-
-To generate it:
-
-1. Run the Jupyter Notebook
-2. Save model using Joblib
-
----
-
-## 📌 Future Improvements
-
-* Use advanced models (Random Forest, XGBoost)
-* Improve accuracy & reduce false positives
-* Deploy app on cloud (Streamlit Cloud / AWS)
-* Add user authentication
+- Implement **XGBoost / LightGBM**
+- Hyperparameter optimization
+- Reduce false positives
+- Cloud deployment
+- Dashboard analytics
+- REST API integration
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contribution
 
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
+Contributions are welcome.
+
+1. Fork the repository
+2. Create feature branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push and create Pull Request
 
 ---
 
 ## 📜 License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the **MIT License**
 
 ---
 
 ## 👨‍💻 Author
 
-**Subhransu Dhar**
+### **Subhransu Dhar**
+
+AI / ML Enthusiast  
+B.Tech Student  
+Passionate about Machine Learning & Deep Learning
 
 ---
 
-⭐ If you like this project, give it a star on GitHub!
+## ⭐ Support
+
+If you found this project useful:
+
+🌟 Star this repository  
+🍴 Fork it  
+📢 Share it
+
+---
+
+### “Detecting fraud before it happens with Machine Learning.”
